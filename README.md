@@ -7,6 +7,7 @@ Given the type and size of the datasets -- namely, text files of books -- I felt
 
 ## Video Demonstration
 Part 1: https://www.loom.com/share/fbf250da080345e68a87a29726f2ae2b
+
 Part 2: https://www.loom.com/share/2a7674debdaf48d39a23e83bf3603f81
 
 ## Features
@@ -17,11 +18,14 @@ Part 2: https://www.loom.com/share/2a7674debdaf48d39a23e83bf3603f81
 
 ## Data Ingestion and Transformation
 `rake get_book[:url]`
+
 `rake transform_book_to_pairings[:source_id]`
 
 ## API
 `get /api/v1/pairings', to: 'pairings#index'`
+
 `get 'api/vi/pairings/:phrase', to: 'pairings#show'`
+
 Optional parameters are `chapters: [int]` and `source: str`
 
 ## Areas of Improvement
