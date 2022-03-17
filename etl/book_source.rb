@@ -13,14 +13,13 @@ class BookSource
       if line.match(/^Chapter \w+\./)
         completed_chapter_string = chapter_string
         chapter_string = ""
-        binding.pry
         yield(completed_chapter_string)
       end
 
       next if current_chapter.zero? # skip anything before the first chapter
       break if end_of_text?(line) # skip anything after the last line
 
-      line << chapter_string
+      chapter_string << line
     end
   end
 
